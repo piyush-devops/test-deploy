@@ -14,12 +14,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"]
 }
 
-resource "aws_instance" "helloworld" {
+resource "aws_instance" "helloworld2" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
-}
-
-resource "aws_instance" "helloworld23" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type  = "t2.micro"
+  instance_type                  = "t2.micro"
 }
